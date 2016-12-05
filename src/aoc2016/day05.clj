@@ -4,9 +4,6 @@
 
 (def input "cxdnnyjw")
 
-(def data 
-  '("00000fe1e92080b9951b053e70e31fcb" "000007c827126c81fa664211693f2540" "000007880153f1b804481a39a6d2e86a" "00000a6e225253b6aaa8f20efbaad8b5" "00000096164643e2e0fbf5a91bfd7f06" "00000e77a8b223b2d149990fb634bd74" "000006ec13bc03b597beee4fa9352176" "00000ee477915a03c15f93ac53769648"))
-
 (def candidates
   (->> (range)
        (map (comp digest/md5 #(str input %)))
