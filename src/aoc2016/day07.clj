@@ -42,7 +42,7 @@
          (> 0))))
 
 (defn match-count [data func]
-  (->> data (map func) (filter true?) (count)))
+  (count (filter func data)))
 
 (defn part-1 []
   (match-count (load-input) supports-tls?))
